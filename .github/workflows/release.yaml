@@ -17,7 +17,6 @@ concurrency:
 jobs:
   build-project:
     name: Build Project 🧱
-    if: github.ref_type == 'tag'
     uses: ./.github/workflows/build.yaml
     secrets: inherit
     permissions:
