@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>665</width>
+    <height>615</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>624</width>
+        <height>1062</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;About LexiSynth&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Version: 0.0.1-beta&lt;br/&gt;LexiSynth is an AI-based speech analysis and synthesis tool for real-time applications.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Copyright © 2024 Roy Shilkrot. All Rights Reserved.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;License&lt;/span&gt;&lt;br/&gt;LexiSynth is proprietary software licensed by Roy Shilkrot. This license permits commercial use but strictly prohibits any form of distribution or modification of the software and its documentation. For more details on licensing, please contact &lt;a href=&quot;mailto:lexisynth@scoresight.live&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;lexisynth@scoresight.live&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Third-Party Software&lt;/span&gt;&lt;br/&gt;LexiSynth incorporates components from third-party sources under their respective licenses:&lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;CTranslate2: &lt;a href=&quot; https://github.com/OpenNMT/CTranslate2&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://github.com/OpenNMT/CTranslate2&lt;/span&gt;&lt;/a&gt; MIT License&lt;/li&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;faster-whisper: &lt;a href=&quot; https://github.com/SYSTRAN/faster-whisper&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://github.com/SYSTRAN/faster-whisper&lt;/span&gt;&lt;/a&gt; MIT License&lt;/li&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot; https://huggingface.co/jncraton/m2m100_418M-ct2-int8&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://huggingface.co/jncraton/m2m100_418M-ct2-int8&lt;/span&gt;&lt;/a&gt; MIT License&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Detailed licensing information for these components is included within the software distribution.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Qt Application Framework&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This application uses the Qt application framework, which is a comprehensive C++ library for cross-platform development of GUI applications. Qt is used under the terms of the GNU Lesser General Public License (LGPL) version 3. Qt is a registered trademark of The Qt Company Ltd and is developed and maintained by The Qt Project and various contributors.&lt;/p&gt;&lt;p&gt;For more information about Qt, including source code of Qt libraries used by this application and guidance on how to obtain or replace Qt libraries, please visit the Qt Project's official website at &lt;a href=&quot;http://www.qt.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;http://www.qt.io&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;We are committed to ensuring compliance with the LGPL v3 license and support the principles of open source software development. If you have any questions or concerns regarding our use of Qt, please contact us directly.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Disclaimer of Warranty&lt;/span&gt;&lt;br/&gt;LexiSynth is provided &amp;quot;AS IS&amp;quot;, without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement. In no event shall Roy Shilkrot be liable for any claim, damages, or other liability, whether in an action of contract, tort or otherwise, arising from, out of, or in connection with the software or the use or other dealings in the software.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Limitation of Liability&lt;/span&gt;&lt;br/&gt;To the maximum extent permitted by applicable law, in no event will Roy Shilkrot, or its suppliers or licensors, be liable for any indirect, special, incidental, consequential, or punitive damages arising out of the use or inability to use Lexis, including, without limitation, damages for loss of goodwill, work stoppages, computer failure or malfunction, or any and all other commercial damages or losses, even if advised of the possibility thereof.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Contact Information&lt;/span&gt;&lt;br/&gt;For support, feedback, or more information, please visit &lt;a href=&quot;https://scoresight.live/pages/lexisynth&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://scoresight.live/pages/lexisynth&lt;/span&gt;&lt;/a&gt; or contact us at &lt;a href=&quot;mailto:lexisynth@scoresight.live&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;lexisynth@scoresight.live&lt;/span&gt;&lt;/a&gt; or &lt;a href=&quot;https://discord.gg/BedTTVnZDg&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://discord.gg/BedTTVnZDg&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Close</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>Dialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>Dialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

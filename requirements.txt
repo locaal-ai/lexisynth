@@ -1,0 +1,11 @@
+ctranslate2
+faster-whisper
+obsws_python
+platformdirs
+pyaudio
+pydub
+pyinstaller
+pyqt6
+sentencepiece
+sounddevice
+soundfile
