@@ -111,7 +111,7 @@ jobs:
 
           echo "### Checksums" > ${{ github.workspace }}/CHECKSUMS.txt
           # find the files from the above step and generate checksums
-          for file in ${{ github.workspace }}/scoresight-*; do
+          for file in ${{ github.workspace }}/uploads/lexisynth-*; do
             echo "    ${file##*/}: $(sha256sum "${file}" | cut -d " " -f 1)" >> ${{ github.workspace }}/CHECKSUMS.txt
           done
 
@@ -123,6 +123,6 @@ jobs:
           draft: true
           body_path: ${{ github.workspace }}/CHECKSUMS.txt
           files: |
-            ${{ github.workspace }}/lexisynth-*.exe
-            ${{ github.workspace }}/lexisynth-*.dmg
-            ${{ github.workspace }}/lexisynth-*.tar
+            ${{ github.workspace }}/uploads/lexisynth-*.dmg
+            ${{ github.workspace }}/uploads/lexisynth-*.tar
+            ${{ github.workspace }}/uploads/lexisynth-*.zip
