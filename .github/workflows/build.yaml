@@ -95,6 +95,7 @@ jobs:
         run: |
           echo "LOCAL_RELEASE_TAG=${GITHUB_REF_NAME}" >> .env
           echo "LOCAL_RELEASE_DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")" >> .env
+          echo "KMP_DUPLICATE_LIB_OK=TRUE" >> .env
 
       - name: Write .env file Windows
         if: matrix.os == 'windows-latest'
@@ -102,6 +103,7 @@ jobs:
           @"
           LOCAL_RELEASE_TAG=$env:GITHUB_REF_NAME
           LOCAL_RELEASE_DATE=$(Get-Date -Format 'yyyy-MM-ddTHH:mm:ssZ')
+          KMP_DUPLICATE_LIB_OK=TRUE
           "@ | Out-File -FilePath .env -Encoding ASCII
         shell: pwsh
 
