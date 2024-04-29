@@ -1,6 +1,7 @@
 ctranslate2
 faster-whisper
 obsws_python
+pillow
 platformdirs
 pyaudio
 pydub
