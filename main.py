@@ -31,19 +31,22 @@ NOT_IMPLEMENTED = "Not implemented yet"
 
 
 def disable_dropdown_options_by_text(
-    combo_box, text: str | list[str], negative_case=False
+    combo_box, text, negative_case=False
 ):
     for i in range(combo_box.count()):
+        disable = False
         if (isinstance(text, list) and combo_box.itemText(i) in text) or (
             isinstance(text, str) and combo_box.itemText(i) == text
         ):
             if not negative_case:
-                combo_box.model().item(i).setEnabled(False)
-                combo_box.model().item(i).setToolTip(NOT_IMPLEMENTED)
+                disable = True
         else:
             if negative_case:
-                combo_box.model().item(i).setEnabled(False)
-                combo_box.model().item(i).setToolTip(NOT_IMPLEMENTED)
+                disable = True
+
+        if disable:
+            combo_box.model().item(i).setEnabled(False)
+            combo_box.model().item(i).setToolTip(NOT_IMPLEMENTED)
 
 
 def toggle_all_widgets_in_a_groupbox(group_box, enabled):
