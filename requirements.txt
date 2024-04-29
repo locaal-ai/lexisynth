@@ -1,4 +1,5 @@
 ctranslate2
+dotenv
 faster-whisper
 obsws_python
 pillow
