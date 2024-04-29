@@ -27,10 +27,10 @@ from transcription import AudioTranscriber
 from translation import TranslationThread
 from text_to_speech import TextToSpeechThread
 
-ONLY_IN_PRO = "Only available in LexiSynth Pro"
+NOT_IMPLEMENTED = "Not implemented yet"
 
 
-def disable_pro_dropdown_options_by_text(
+def disable_dropdown_options_by_text(
     combo_box, text: str | list[str], negative_case=False
 ):
     for i in range(combo_box.count()):
@@ -39,11 +39,11 @@ def disable_pro_dropdown_options_by_text(
         ):
             if not negative_case:
                 combo_box.model().item(i).setEnabled(False)
-                combo_box.model().item(i).setToolTip(ONLY_IN_PRO)
+                combo_box.model().item(i).setToolTip(NOT_IMPLEMENTED)
         else:
             if negative_case:
                 combo_box.model().item(i).setEnabled(False)
-                combo_box.model().item(i).setToolTip(ONLY_IN_PRO)
+                combo_box.model().item(i).setToolTip(NOT_IMPLEMENTED)
 
 
 def toggle_all_widgets_in_a_groupbox(group_box, enabled):
@@ -185,12 +185,12 @@ class MainWindow(QtWidgets.QMainWindow):
         self.comboBox_speechEngine.currentIndexChanged.connect(self.speechEngineChanged)
 
         # disable everything on comboBox_transcriptionOutputText except for "Text File" and "No text output"
-        disable_pro_dropdown_options_by_text(
+        disable_dropdown_options_by_text(
             self.comboBox_transcriptionOutputText,
             ["No text output", "Text File"],
             negative_case=True,
         )
-        disable_pro_dropdown_options_by_text(
+        disable_dropdown_options_by_text(
             self.comboBox_translationOutputTextOptions,
             ["No text output", "Text File"],
             negative_case=True,
@@ -204,9 +204,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.comboBox_translationSourceSelect.currentIndexChanged.connect(
             self.translationSourceChanged
         )
-        disable_pro_dropdown_options_by_text(
-            self.comboBox_translationSourceSelect, "URL"
-        )
+        disable_dropdown_options_by_text(self.comboBox_translationSourceSelect, "URL")
 
         self.outputsFolder = None
         self.transcriptionOutputTextFilePath = None
@@ -545,14 +543,14 @@ class MainWindow(QtWidgets.QMainWindow):
         for device in audioDevices:
             self.comboBox_audioSources.addItem(device.sourceName)
         self.comboBox_audioSources.addItem("--- NDI Sources ---")
-        disable_pro_dropdown_options_by_text(
+        disable_dropdown_options_by_text(
             self.comboBox_audioSources, "--- NDI Sources ---"
         )
         # add file input option
         self.comboBox_audioSources.addItem("File")
         # add stream option
         self.comboBox_audioSources.addItem("Stream")
-        disable_pro_dropdown_options_by_text(self.comboBox_audioSources, "Stream")
+        disable_dropdown_options_by_text(self.comboBox_audioSources, "Stream")
 
     def audioSourceChanged(self):
         logger.info("audio source changed")
@@ -696,7 +694,7 @@ if __name__ == "__main__":
     os_name = platform.system()
     if os_name != "Darwin":
         try:
-            import pyi_splash
+            import pyi_splash  # type: ignore
 
             pyi_splash.close()
         except ImportError:

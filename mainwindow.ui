@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>939</width>
+    <width>988</width>
     <height>612</height>
    </rect>
   </property>
@@ -484,7 +484,7 @@
              </font>
             </property>
             <property name="toolTip">
-             <string>Only available in Lexis Pro</string>
+             <string>Not implemented yet</string>
             </property>
             <item>
              <property name="text">
@@ -1267,8 +1267,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>939</width>
-     <height>24</height>
+     <width>988</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>

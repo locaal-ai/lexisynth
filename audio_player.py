@@ -19,6 +19,7 @@ class AudioBuffer:
 
 class AudioPlayer(QThread):
     def __init__(self):
+        super().__init__()
         self.queue = queue.Queue()
         self.isRunning = False
 
