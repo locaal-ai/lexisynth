@@ -1,5 +1,4 @@
 ctranslate2
-dotenv
 faster-whisper
 obsws_python
 pillow
@@ -8,6 +7,7 @@ pyaudio
 pydub
 pyinstaller
 pyqt6
+python-dotenv
 sentencepiece
 sounddevice
 soundfile

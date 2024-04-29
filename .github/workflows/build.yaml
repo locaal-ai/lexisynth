@@ -47,6 +47,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y portaudio19-dev
+          pip install --upgrade setuptools wheel
 
       - name: Install dependencies for MacOS
         if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
