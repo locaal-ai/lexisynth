@@ -30,9 +30,7 @@ from text_to_speech import TextToSpeechThread
 NOT_IMPLEMENTED = "Not implemented yet"
 
 
-def disable_dropdown_options_by_text(
-    combo_box, text, negative_case=False
-):
+def disable_dropdown_options_by_text(combo_box, text, negative_case=False):
     for i in range(combo_box.count()):
         disable = False
         if (isinstance(text, list) and combo_box.itemText(i) in text) or (
