@@ -142,13 +142,19 @@ class AudioRecorder(QtCore.QThread):
 
     @staticmethod
     def get_audio_devices() -> list[AudioSource]:
-        devices = sd.query_devices(kind="input")
+        devices = sd.query_devices()
+        devices_list = []
         if type(devices) is dict:
-            devices = [devices]
+            devices_list = [devices]
+        else:
+            for device in devices:
+                if device["max_input_channels"] > 0:
+                    logger.debug(f"Audio device: {device}")
+                    devices_list.append(device)
         return [
             AudioSource(
                 sourceName=device["name"],
                 sourceType=AudioSource.SourceType.DEVICE,
             )
-            for device in devices
+            for device in devices_list
         ]

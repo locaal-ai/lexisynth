@@ -62,6 +62,7 @@ class AudioTranscriber(QThread):
         self.input_queue = queue.Queue()
         self.model = None
         self.running = False
+        self.language = None
         # check if model has been downloaded already
         checkAndDownloadModel(ModelDownloadInfo.FASTER_WHISPER_TINY_CT2)
 
